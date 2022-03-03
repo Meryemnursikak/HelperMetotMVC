@@ -1,0 +1,27 @@
+﻿@using HelperMetotMVC.library
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomePage</title>
+</head>
+<body>
+    <div> 
+        @HelperMetotlar.input("btn1","button","Gönder")
+    </div>
+
+    <hr />
+    @Html.Alert("success","deneme metni")
+    
+
+    <hr />
+    @HelperMetotlar.Table("Tablo",2,2,"baslik1","baslik2")
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿@helper input(string isim, string tip, string deger)
+{
+    <input type="@tip" name="@isim" value="@deger" />
+}
+
+
+@*<table border="1">
+        <th>Başlık</th>
+        <th>Başlık2</th>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>*@
+
+
+@helper Table(string name, int satir, int sutun,params string[] baslik)
+{
+<table name="@name" id="@name" border="1">
+
+    @for (int i = 0; i < sutun; i++)
+    {
+        <th>
+            @baslik[i]
+        </th>
+    }
+
+    @for (int i = 0; i < satir; i++)
+    {
+        <tr>
+            @for (int j = 0; j < sutun; j++)
+            {
+                <td>
+                    @(i.ToString()+ "," +j.ToString())
+                </td>
+            }
+        </tr>
+    }
+
+</table>
+
+}
